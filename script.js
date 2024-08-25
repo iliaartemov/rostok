@@ -1,12 +1,29 @@
-// script.js
+(function() {
+    let ticking = false;
 
-document.addEventListener('scroll', function () {
-    const rostockElement = document.querySelector('.rostok');
-    const scrollPosition = window.scrollY;
+    function updateParallax() {
+        const rostockElement = document.querySelector('.rostok');
+        if (rostockElement) {
+            const scrollPosition = window.scrollY;
+            const parallaxEffect = scrollPosition * 0.5; 
+            rostockElement.style.transform = `translateY(${parallaxEffect}px)`;
+        }
+        ticking = false;
+    }
 
-    // Adjust this value to control the parallax effect
-    const parallaxEffect = scrollPosition * 0.5; 
+    function onScroll() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
 
-    rostockElement.style.transform = `translateY(${parallaxEffect}px)`;
-});
+    // Add scroll event listener
+    document.addEventListener('scroll', onScroll);
 
+    // Disable parallax effect on mobile devices with small screens
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) {
+        document.removeEventListener('scroll', onScroll);
+    }
+})();
