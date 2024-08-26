@@ -181,15 +181,15 @@ body, html {
 }
 
 @media (max-width: 768px) {
-        .rostok {
+      .rostok {
         font-size: 8px;
     }
     .name {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .description {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .copyright {
@@ -211,6 +211,9 @@ body, html {
     .h4 {
         font-size: 10px;
     }
+    .work {
+        font-size: 14px;
+    }
     overflow-x: hidden;
 }
 
@@ -219,11 +222,11 @@ body, html {
         font-size: 8px;
     }
     .name {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .description {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .copyright {
