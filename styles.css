@@ -243,10 +243,13 @@ body, html {
     .h4 {
         font-size: 10px;
     }
+    .work {
+        font-size: 14px;
+    }
 }
 
 /* Work Section Styles */
-.work {
+{
     font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: 3.2px;
