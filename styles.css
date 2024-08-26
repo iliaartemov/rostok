@@ -271,11 +271,17 @@ body, html {
     .image-container {
         max-width: 70%; /* Reduce image size for tablets */
     }
+    .projects {
+        max-width: 70%; /* Reduce image size for tablets */
+    }
 }
 
 @media (max-width: 480px) {
     .image-container {
         max-width: 90%; /* Further reduce image size for mobile phones */
+    }
+    .projects {
+        max-width: 90%;
     }
 }
 
