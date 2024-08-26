@@ -180,62 +180,68 @@ body, html {
 }
 
 @media (max-width: 768px) {
+    .rostok {
+        font-size: 10px;
+    }
     .name {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .description {
-        font-size: 16px;
-    }
-
-    .copyright {
         font-size: 14px;
     }
 
+    .copyright {
+        font-size: 10px;
+    }
+
     .h1 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .h2 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .h3 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .h4 {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
+    .rostok {
+        font-size: 10px;
+    }
     .name {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .description {
-        font-size: 16px;
-    }
-
-    .copyright {
         font-size: 14px;
     }
 
+    .copyright {
+        font-size: 10px;
+    }
+
     .h1 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .h2 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .h3 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .h4 {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
