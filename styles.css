@@ -99,11 +99,6 @@ body, html {
     font-weight: 700;
     letter-spacing: 3.2px;
     text-transform: uppercase;
-    animation-name: focus-in-contract;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
 }
 
 .name {
@@ -172,90 +167,8 @@ body, html {
     line-height: 1.5;
 }
 
-/* Responsive Design */
-@media (max-width: 1440px) {
-    .container, .page {
-        padding: 0;
-    }
-    overflow-x: hidden;
-}
 
-@media (max-width: 768px) {
-      .rostok {
-        font-size: 8px;
-    }
-    .name {
-        font-size: 18px;
-    }
-
-    .description {
-        font-size: 12px;
-    }
-
-    .copyright {
-        font-size: 8px;
-    }
-
-    .h1 {
-        font-size: 10px;
-    }
-
-    .h2 {
-        font-size: 10px;
-    }
-
-    .h3 {
-        font-size: 10px;
-    }
-
-    .h4 {
-        font-size: 10px;
-    }
-    .work {
-        font-size: 14px;
-    }
-    overflow-x: hidden;
-}
-
-@media (max-width: 480px) {
-    .rostok {
-        font-size: 8px;
-    }
-    .name {
-        font-size: 18px;
-    }
-
-    .description {
-        font-size: 12px;
-    }
-
-    .copyright {
-        font-size: 8px;
-    }
-
-    .h1 {
-        font-size: 10px;
-    }
-
-    .h2 {
-        font-size: 10px;
-    }
-
-    .h3 {
-        font-size: 10px;
-    }
-
-    .h4 {
-        font-size: 10px;
-    }
-    .work {
-        font-size: 14px;
-    }
-    overflow-x: hidden;
-}
-
-/* Work Section Styles */
-{
+.work {
     font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: 3.2px;
@@ -275,25 +188,3 @@ body, html {
     align-items: center;
     width: 50%;
 }
-
-@media (max-width: 768px) {
-    .image-container {
-        max-width: 70%; /* Reduce image size for tablets */
-    }
-    .projects {
-        max-width: 70%; /* Reduce image size for tablets */
-    }
-    overflow-x: hidden;
-}
-
-@media (max-width: 480px) {
-    .image-container {
-        max-width: 90%; /* Further reduce image size for mobile phones */
-    }
-    .projects {
-        max-width: 90%;
-    }
-    overflow-x: hidden;
-}
-
-
