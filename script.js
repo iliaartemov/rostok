@@ -1,57 +1,43 @@
-(function() {
-    let ticking = false;
-    let currentSectionIndex = 0;
-    const sections = document.querySelectorAll('.page');
-    const sectionCount = sections.length;
+document.addEventListener('DOMContentLoaded', function () {
+    const rostockElement = document.querySelector('.rostok');
+
+    if (!rostockElement) return; // Exit if the element is not found
+
+    let lastScrollTop = 0;
+    const parallaxFactor = window.innerWidth <= 768 ? 0.3 : 0.5; // Reduce parallax effect on smaller screens
 
     function updateParallax() {
-        const rostockElement = document.querySelector('.rostok');
-        if (rostockElement) {
-            const scrollPosition = window.scrollY;
-            const parallaxEffect = scrollPosition * 0.5; 
+        const scrollPosition = window.scrollY;
+        const parallaxEffect = scrollPosition * parallaxFactor;
+
+        // Use requestAnimationFrame for smoother animation
+        requestAnimationFrame(() => {
             rostockElement.style.transform = `translateY(${parallaxEffect}px)`;
-        }
-        ticking = false;
+        });
     }
 
-    function onScroll() {
-        if (!ticking) {
-            window.requestAnimationFrame(updateParallax);
-            ticking = true;
-        }
+    // Throttle function to limit the frequency of scroll event handling
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function () {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        };
     }
 
-    function scrollToSection(index) {
-        if (index >= 0 && index < sectionCount) {
-            sections[index].scrollIntoView({ behavior: 'smooth' });
-            currentSectionIndex = index;
-        }
-    }
-
-    function onKeyDown(event) {
-        switch(event.key) {
-            case 'ArrowDown':
-                if (currentSectionIndex < sectionCount - 1) {
-                    scrollToSection(currentSectionIndex + 1);
-                }
-                break;
-            case 'ArrowUp':
-                if (currentSectionIndex > 0) {
-                    scrollToSection(currentSectionIndex - 1);
-                }
-                break;
-            default:
-                break;
-        }
-    }
-
-    // Add scroll event listener
-    document.addEventListener('scroll', onScroll);
-    document.addEventListener('keydown', onKeyDown);
-
-    // Disable parallax effect on mobile devices with small screens
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    if (isMobile) {
-        document.removeEventListener('scroll', onScroll);
-    }
-})();
+    // Attach the throttled updateParallax function to the scroll event
+    window.addEventListener('scroll', throttle(updateParallax, 30)); // Adjust throttle limit as needed
+});
