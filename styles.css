@@ -262,6 +262,18 @@ body, html {
     width: 50%;
 }
 
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 70%; /* Reduce image size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        max-width: 90%; /* Further reduce image size for mobile phones */
+    }
+}
+
 .rostok {
     animation-name: focus-in-contract;
     animation-duration: 3.2s;
