@@ -296,7 +296,7 @@ body, html {
     overflow-x: hidden;
 }
 
-.rostok {
+.rostok, .name, .description, .copyright  {
     animation-name: focus-in-contract;
     animation-duration: 3.2s;
 }
