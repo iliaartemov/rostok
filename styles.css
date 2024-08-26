@@ -95,7 +95,7 @@ body, html {
 }
 
 /* Header Styles */
-.name, .description, .copyright {
+.rostok, .name, .description, .copyright {
     font-weight: 700;
     letter-spacing: 3.2px;
     text-transform: uppercase;
@@ -296,7 +296,4 @@ body, html {
     overflow-x: hidden;
 }
 
-.rostok, .name, .description, .copyright  {
-    animation-name: focus-in-contract;
-    animation-duration: 3.2s;
-}
+
