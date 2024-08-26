@@ -8,7 +8,6 @@
 }
 
 /* Global Styles */
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -46,14 +45,12 @@ body, html {
     position: relative;
 }
 
-/* First Section Styles */
-#home {
+/* Section Styles */
+#home, #about, #works {
     position: relative;
 }
 
-/* Second Section Styles */
 #about {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,6 +58,15 @@ body, html {
     height: 100vh;
     padding: 0 20px;
     box-sizing: border-box;
+}
+
+#works {
+    background: linear-gradient(
+        180deg,
+        #FFFFFF 0%, /* Start color of gradient */
+        #D5FF00 50%, /* Mid color of gradient */
+        #FFFFFF 100%  /* End color of gradient */
+    );
 }
 
 /* Text Content Styles */
@@ -88,30 +94,25 @@ body, html {
     object-fit: contain;
 }
 
-/* Third Section Styles */
-#works {
-    background: linear-gradient(
-        180deg,
-        #FFFFFF 0%, /* Start color of gradient */
-        #D5FF00 50%, /* Mid color of gradient */
-        #FFFFFF 100%  /* End color of gradient */
-    );
-}
-
 /* Header Styles */
-.name {
+.name, .description, .copyright {
     font-weight: 700;
-    font-size: 3.5rem;
     letter-spacing: 3.2px;
     text-transform: uppercase;
+    animation-name: focus-in-contract;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+.name {
+    font-size: 3.5rem;
     line-height: 1.1;
 }
 
 .description {
-    font-weight: 700;
     font-size: 1.5rem;
-    letter-spacing: 3.2px;
-    text-transform: uppercase;
     line-height: 1.5;
     margin-top: 10px;
     max-width: 80%;
@@ -123,271 +124,21 @@ body, html {
     letter-spacing: 0.56px;
     margin-top: 20px;
     color: #000000;
-}
-
-/* Header Styles */
-.h1, .h2, .h3, .h4 {
-    font-family: 'Roboto', sans-serif;
-    color: #141414;
-    margin-bottom: 1rem;
-    text-align: left;
-    max-width: 80%;
-    margin-right: auto;
-}
-
-.h1 {
-    font-weight: 700;
-    font-size: 2.5rem;
-    line-height: 1.2;
-}
-
-.h2 {
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 1.3;
-}
-
-.h3 {
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 1.4;
-}
-
-.h4 {
-    font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1.5;
-}
-
-/* Responsive Design */
-@media (max-width: 1440px) {
-    .container, .page {
-        padding: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .name {
-        font-size: 2.5rem;
-    }
-
-    .description {
-        font-size: 1.2rem;
-        max-width: 100%;
-    }
-
-    .rostok, .copyright {
-        font-size: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .name {
-        font-size: 2rem;
-    }
-
-    .description {
-        font-size: 1rem;
-    }
-
-    .rostok, .copyright {
-        font-size: 8px;
-    }
-}
-
-/* Work Section Styles */
-.work {
-    font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: 3.2px;
-    text-transform: uppercase;
-    line-height: 1.5;
-    margin-top: 10px;
-    max-width: 80%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-#works .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-}
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
-/* Font Face Declaration */
-@font-face {
-    font-family: "GeistMono-Light";
-    src: url("/path/to/your/fonts/GeistMono-Light.otf") format("opentype");
-}
-
-/* Global Styles */
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    font-family: 'Roboto', sans-serif;
-    background-color: #FFFFFF; /* Set default background color for body */
-}
-
-/* Container for full-page sections */
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-}
-
-/* Individual Page Styles */
-.page {
-    flex: 0 0 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
-    width: 100%;
-    position: relative;
-}
-
-/* First Section Styles */
-#home {
-    position: relative;
-}
-
-/* Second Section Styles */
-#about {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* Text Content Styles */
-.text-content {
-    position: relative;
-    z-index: 1;
-    text-align: left;
-    max-width: 80%;
-}
-
-/* Image Container Styles */
-.image-container {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    max-width: 50%;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Third Section Styles */
-#works {
-    background: linear-gradient(
-        180deg,
-        #FFFFFF 0%, /* Start color of gradient */
-        #D5FF00 50%, /* Mid color of gradient */
-        #FFFFFF 100%  /* End color of gradient */
-    );
-}
-
-div.at-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-/* Header Styles */
-.name {
-    font-weight: 700;
-    font-size: 3.5rem;
-    letter-spacing: 3.2px;
-    text-transform: uppercase;
-    line-height: 1.1;
-    animation-name: focus-in-contract;
-	animation-duration: 2s;
-	animation-timing-function: ease-in;
-	animation-delay: 0s;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-	animation-fill-mode: both;
-
-
 }
 
 @keyframes focus-in-contract {
-			
     0% {
-        letter-spacing:1em;
-        filter:blur(12px);
-        opacity:0;
+        letter-spacing: 1em;
+        filter: blur(12px);
+        opacity: 0;
     }
     100% {
-        filter:blur(0);
-        opacity:1;
+        filter: blur(0);
+        opacity: 1;
     }
 }
 
-.description {
-    font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: 3.2px;
-    text-transform: uppercase;
-    line-height: 1.5;
-    margin-top: 10px;
-    max-width: 80%;
-    animation-name: focus-in-contract;
-	animation-duration: 3s;
-	animation-timing-function: ease-in;
-	animation-delay: 0s;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-	animation-fill-mode: both;
-}
-
-.copyright {
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.56px;
-    margin-top: 20px;
-    color: #000000;
-    animation-name: focus-in-contract;
-	animation-duration: 4s;
-	animation-timing-function: ease-in;
-	animation-delay: 0s;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-	animation-fill-mode: both;
-}
-
-/* Header Styles */
+/* Header Heading Styles */
 .h1, .h2, .h3, .h4 {
     font-family: 'Roboto', sans-serif;
     color: #141414;
@@ -430,30 +181,62 @@ div.at-container {
 
 @media (max-width: 768px) {
     .name {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
     .description {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         max-width: 100%;
     }
 
-    .rostok, .copyright {
+    .copyright {
         font-size: 10px;
+    }
+
+    .h1 {
+        font-size: 2rem;
+    }
+
+    .h2 {
+        font-size: 1.75rem;
+    }
+
+    .h3 {
+        font-size: 1.25rem;
+    }
+
+    .h4 {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .name {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .description {
+        font-size: 0.9rem;
+    }
+
+    .copyright {
+        font-size: 8px;
+    }
+
+    .h1 {
+        font-size: 1.5rem;
+    }
+
+    .h2 {
+        font-size: 1.25rem;
+    }
+
+    .h3 {
         font-size: 1rem;
     }
 
-    .rostok, .copyright {
-        font-size: 8px;
+    .h4 {
+        font-size: 0.875rem;
     }
 }
 
@@ -481,10 +264,5 @@ div.at-container {
 
 .rostok {
     animation-name: focus-in-contract;
-	animation-duration: 3.2s;
-	animation-timing-function: ease-in;
-	animation-delay: 0s;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-	animation-fill-mode: both;
+    animation-duration: 3.2s;
 }
