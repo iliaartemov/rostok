@@ -180,8 +180,8 @@ body, html {
 }
 
 @media (max-width: 768px) {
-    .rostok {
-        font-size: 10px;
+        .rostok {
+        font-size: 8px;
     }
     .name {
         font-size: 16px;
@@ -192,29 +192,29 @@ body, html {
     }
 
     .copyright {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .h1 {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .h2 {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .h3 {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .h4 {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .rostok {
-        font-size: 10px;
+        font-size: 8px;
     }
     .name {
         font-size: 16px;
@@ -225,23 +225,23 @@ body, html {
     }
 
     .copyright {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .h1 {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .h2 {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .h3 {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .h4 {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
