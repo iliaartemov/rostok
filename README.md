@@ -1,4 +1,4 @@
-Frontend Showcase Project / Desktop Version
+Frontend / Web – Design Showcase Project / Desktop Version
 
 ROSTOK
 
